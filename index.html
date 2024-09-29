@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First National Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/logo-2.webp"
+            alt="First National Bank"
+            style="height: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./personal-checking.html">Checking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./personal-loans.html">Loans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./personal-savings.html">Savings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item pr-md-4">
+              <a class="nav-link" href="#">888-777-9798</a>
+            </li>
+            <li class="nav-item">
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+              >
+                Online Banking
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModalCenter"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Online Banking Login
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Login Form Inside Modal -->
+                      <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                          <label for="username" class="form-label"
+                            >Username (email)</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="username"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                          />
+                        </div>
+                        <div id="errorOutput" class="error-message"></div>
+                        <button type="submit" class="btn btn-primary w-100">
+                          Login
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+      </div>
+
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-item active"
+          style="
+            background-image: url('./assets/c1.webp');
+            background-size: contain;
+          "
+        ></div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('./assets/c2.webp');
+            background-size: cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-caption">
+              <h1 class="display-3">Home Improvements Made Easy</h1>
+              <p class="lead">With A Home Equity Line Of Credit</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('./assets/c3.webp');
+            background-size: cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-caption">
+              <h1 class="display-3">
+                Protect Yourself And Your Money From Scams
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('./assets/c4.webp');
+            background-size: cover;
+          "
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-caption">
+              <h1 class="display-4">Personal Online Banking</h1>
+              <p class="lead">Manage your accounts from anywhere</p>
+              <a href="#" class="btn btn-primary btn-lg">Explore More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div
+          class="carousel-item"
+          style="
+            background-image: url('./assets/c5.webp');
+            background-size: contain;
+          "
+        ></div>
+      </div>
+
+      <!-- Carousel Controls (Arrows) -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Feature section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="row">
+          <!-- Feature 1 -->
+          <div class="col-md-4 mb-4 feature-item">
+            <img src="./assets/hand.png" alt="Feature 1 Icon" />
+            <h4>Personal Loans</h4>
+            <p class="pb-4">
+              Customized loan solutions to fit your individual needs. Prompt
+              approval and processing by your local banker.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+          <!-- Feature 2 -->
+          <div class="col-md-4 mb-4 feature-item">
+            <img src="./assets/wallet.png" alt="Feature 2 Icon" />
+            <h4>Personal Checking</h4>
+            <p class="pb-4">
+              We offer checking accounts that are designed around your needs,
+              whether a basic or interest-bearing account.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+          <!-- Feature 3 -->
+          <div class="col-md-4 mb-4 feature-item">
+            <img src="./assets/pig.png" alt="Feature 3 Icon" />
+            <h4>Personal Savings</h4>
+            <p class="pb-4">
+              Whether you are saving for a vacation, college, or something else,
+              we’ve got a savings account that will meet your needs.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bank-services parallax py-5">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-6">
+            <!-- Service Card 1 -->
+            <div class="col-sm-12 mb-4">
+              <div class="card h-100 shadow-sm p-4">
+                <div class="row">
+                  <div class="col">
+                    <img
+                      src="./assets/chart.png"
+                      alt="Online Banking"
+                      class="mr-3"
+                    />
+                  </div>
+
+                  <div class="col-8 card-body">
+                    <h4 class="card-title">ONLINE BANKING</h4>
+                    <p class="card-text">
+                      Personal Online Banking allows for secure, easy, and
+                      convenient access to your accounts 24/7.
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="col-sm-12 mb-4">
+              <div class="card h-100 shadow-sm p-4">
+                <div class="row">
+                  <div class="col">
+                    <img
+                      src="./assets/list.png"
+                      alt="eStatements"
+                      class="mr-3"
+                    />
+                  </div>
+
+                  <div class="col-8 card-body">
+                    <h4 class="card-title">eSTATEMENTS</h4>
+                    <p class="card-text">
+                      No more filing and storing statements. Your account
+                      information will be safer with 24/7 access.
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="col-sm-12 mb-4">
+              <div class="card h-100 shadow-sm p-4">
+                <div class="row">
+                  <div class="col">
+                    <img src="./assets/hand.png" alt="Bill Pay" class="mr-3" />
+                  </div>
+
+                  <div class="col-8 card-body">
+                    <h4 class="card-title">BILL PAY</h4>
+                    <p class="card-text">
+                      Pay Bills Anytime, Anywhere. Bill Pay is a fast,
+                      convenient, and secure way to pay bills.
+                    </p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <!-- Digital Banking Section -->
+            <div class="text-center text-white py-5">
+              <h3 class="mb-4">DIGITAL BANKING</h3>
+              <p>Wherever and whenever you may need your bank.</p>
+              <a href="#" class="btn btn-primary btn-lg">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-masonry-section">
+      <div class="container">
+        <div
+          class="row custom-masonry-grid"
+          data-masonry='{"percentPosition": true }'
+        >
+          <!-- Custom Card 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="custom-card">
+              <div class="custom-card-header">
+                <img
+                  src="./assets/p1.jpg"
+                  class="img-fluid"
+                  alt="Header Image"
+                />
+                <div class="custom-label">Label 1</div>
+              </div>
+              <div class="custom-card-body">
+                <a href="#" class="custom-card-title">Customer Awareness</a>
+                <div class="custom-card-subtitle">
+                  Aug 1, 2024 | 4 Minute Read
+                </div>
+                <div class="custom-card-text">
+                  Protect Yourself from Fraud and Scams Scams are constantly
+                  changing. Know what to look for and what steps to take …
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <a href="#" class="btn btn-primary">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Card 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="custom-card">
+              <div class="custom-card-header">
+                <img
+                  src="./assets/p1.jpg"
+                  class="img-fluid"
+                  alt="Header Image"
+                />
+                <div class="custom-label">Label 2</div>
+              </div>
+              <div class="custom-card-body">
+                <a href="#" class="custom-card-title"
+                  >Protect Older Americans from Financial Exploitation</a
+                >
+                <div class="custom-card-subtitle">
+                  Jun 26, 2024 | 3 Minute Read
+                </div>
+                <div class="custom-card-text">
+                  What Is Elder Financial Exploitation? It is the
+                  fastest-growing form of elder abuse and it is defined as the
+                  illegal, …
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <a href="#" class="btn btn-primary">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Card 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="custom-card">
+              <div class="custom-card-header">
+                <img
+                  src="./assets/p1.jpg"
+                  class="img-fluid"
+                  alt="Header Image"
+                />
+                <div class="custom-label">Label 3</div>
+              </div>
+              <div class="custom-card-body">
+                <a href="#" class="custom-card-title"
+                  >Text Messaging Attacks: A Smishing Saga
+                </a>
+                <div class="custom-card-subtitle">
+                  Jul 3, 2024 | 3 Minute Read
+                </div>
+                <div class="custom-card-text">
+                  Overview Mark was perplexed by the text message, a package
+                  delivery notification from Amazon – “Delivery attempt missed!
+                  Click the …
+                </div>
+              </div>
+              <div class="custom-card-footer">
+                <a href="#" class="btn btn-primary">Continue Reading</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer bg-navy text-white">
+      <div class="container">
+        <!-- Footer Sub-section 1 -->
+        <div class="row py-5 border-bottom border-white">
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h4 class="fs-4">Personal</h4>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Mortgage Home Loans</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2">Loans</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Checking</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Savings</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Online Banking</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Mobile Banking</a>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Financial Calculators</a
+            >
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h4 class="fs-4">Business</h4>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Mortgage Home Loans</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2">Loans</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Checking</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Savings</a>
+            <a href="#" class="d-block text-white fs-6 mb-2">Online Banking</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h4 class="fs-4">Security</h4>
+            <a href="#" class="d-block text-white fs-6 mb-2">Alert & Tips</a>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Protect Your Identity</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2">Credit Report</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h4 class="fs-4">About</h4>
+            <a href="#" class="d-block text-white fs-6 mb-2">History</a>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Mission & Vision</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2">CEO Message</a>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Location and Hours</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2">Routing Number</a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h4 class="fs-4">Disclosures</h4>
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Privacy Statement</a
+            >
+            <a href="#" class="d-block text-white fs-6 mb-2"
+              >Error Resolution Notice</a
+            >
+          </div>
+        </div>
+
+        <!-- Footer Sub-section 2 -->
+        <div class="row py-4 align-items-center">
+          <div class="col-12 col-md-6 text-md-start mb-3 mb-md-0">
+            <p class="mb-0 fs-6">
+              ©2024 First National Bank of Tennessee, <br />Main Office, 214
+              East Main Street, Livingston, <br />TN 38570 <br />NMLS #431625
+              <br />Member FDIC, Equal Housing Lender Offices Located in Algood,
+              Cookeville, Crossville, Fairfield Glade, Livingston, and Sparta
+            </p>
+            <a href="#" class="d-block link-light h4 mb-2">(888) 777-9798</a>
+            <img src="./assets/fb.png" alt="Icon 2" width="40" height="40" />
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <img src="./assets/badge.svg" alt="Icon 2" width="80" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./validator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.btn-primary {
+  background-color: #1e3a5a;
+  border-color: #1e3a5a;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Styling for the Website Features section */
+.features-section {
+  padding: 50px 0;
+  background-color: #1e3a5a;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-item img {
+  max-width: 80px;
+  margin-bottom: 20px;
+}
+
+.feature-item h4 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.feature-item p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .feature-item h4 {
+    font-size: 28px;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+  }
+}
+
+.account-section {
+  padding: 50px 0;
+  background-color: #1e3a5a;
+}
+
+.account-item {
+  padding: 20px;
+}
+
+.parallax {
+  background: linear-gradient(0deg, #1e3a5a, #1e3a5a75),
+    url("./assets/p2.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bank-services {
+  position: relative;
+  z-index: 2;
+}
+
+.bank-services .card {
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+}
+
+/* Custom Card Footer */
+.custom-card-footer {
+  text-align: left;
+  padding: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+  .custom-card-body,
+  .custom-card-footer {
+    padding: 15px;
+  }
+
+  .custom-card-title {
+    font-size: 22px;
+  }
+
+  .custom-card-subtitle,
+  .custom-card-text {
+    font-size: 16px;
+  }
+}
+
+.custom-footer {
+  background-color: #1e3a5a;
+}
+
+.bg-navy {
+  background-color: #1e3a5a;
+}
